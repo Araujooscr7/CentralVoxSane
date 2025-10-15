@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOXsane - Painel Administrativo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-drone"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>VOXsane</h1>
+                    <span>Monitoramento Aéreo</span>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <h3>PRINCIPAL</h3>
+                <ul class="nav-links">
+                    <li><a href="#" class="active"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-map-marked-alt"></i> Mapa de Calor</a></li>
+                    <li><a href="#"><i class="fas fa-drone"></i> Frota de Drones</a></li>
+                    <li><a href="#"><i class="fas fa-satellite"></i> Visão por Satélite</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h3>GERENCIAMENTO</h3>
+                <ul class="nav-links">
+                    <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Denúncias</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Usuários</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+                    <li><a href="#"><i class="fas fa-database"></i> Dados Coletados</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h3>CONFIGURAÇÕES</h3>
+                <ul class="nav-links">
+                    <li><a href="#"><i class="fas fa-cog"></i> Sistema</a></li>
+                    <li><a href="#"><i class="fas fa-bell"></i> Alertas</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Segurança</a></li>
+                    <li><a href="#"><i class="fas fa-sliders-h"></i> Preferências</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="system-status">
+                    <div class="status-indicator online"></div>
+                    <span>Sistema Online</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>Painel de Controle</h1>
+                    <p>Monitoramento em tempo real de áreas sem saneamento</p>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Pesquisar denúncias, locais...">
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-notification">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-count">5</span>
+                        </button>
+                        <button class="btn-quick-action">
+                            <i class="fas fa-plus"></i>
+                            Nova Missão
+                        </button>
+                        <div class="user-profile">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div class="user-info">
+                                <span class="user-name">Operador Master</span>
+                                <span class="user-role">Admin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Alert Banner -->
+            <div class="alert-banner warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>3 denúncias urgentes requerem atenção imediata</span>
+                <button class="btn-alert">Ver Agora</button>
+            </div>
+
+            <!-- Stats Grid -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3>Drones Ativos</h3>
+                        <i class="fas fa-drone"></i>
+                    </div>
+                    <div class="stat-value">8/12</div>
+                    <div class="stat-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 67%"></div>
+                        </div>
+                        <span>67% da frota</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3>Denúncias Hoje</h3>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="stat-value">24</div>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        12% vs ontem
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3>Áreas Mapeadas</h3>
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <div class="stat-value">156 km²</div>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        18 km² esta semana
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3>Tempo de Operação</h3>
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-value">248h</div>
+                    <div class="stat-trend negative">
+                        <i class="fas fa-arrow-down"></i>
+                        5% vs semana passada
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Content Grid -->
+            <div class="content-grid">
+                <!-- Denúncias Recentes -->
+                <section class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-list-ol"></i> Denúncias Recentes</h2>
+                        <div class="card-actions">
+                            <button class="btn-filter active">Todas</button>
+                            <button class="btn-filter">Pendentes</button>
+                            <button class="btn-filter">Urgentes</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="complaints-list">
+                            <div class="complaint-item urgent">
+                                <div class="complaint-marker"></div>
+                                <div class="complaint-content">
+                                    <div class="complaint-header">
+                                        <h4>Esgoto a céu aberto</h4>
+                                        <span class="complaint-id">#DR-0241</span>
+                                    </div>
+                                    <p class="complaint-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Vila Esperança - Zona Norte
+                                    </p>
+                                    <div class="complaint-footer">
+                                        <span class="complaint-time">
+                                            <i class="fas fa-clock"></i>
+                                            Há 2 horas
+                                        </span>
+                                        <span class="complaint-priority urgent">
+                                            <i class="fas fa-exclamation-circle"></i>
+                                            Prioridade Alta
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="complaint-actions">
+                                    <button class="btn-action" title="Atribuir Drone">
+                                        <i class="fas fa-drone"></i>
+                                    </button>
+                                    <button class="btn-action" title="Visualizar Detalhes">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="complaint-item">
+                                <div class="complaint-marker"></div>
+                                <div class="complaint-content">
+                                    <div class="complaint-header">
+                                        <h4>Falta de água potável</h4>
+                                        <span class="complaint-id">#DR-0240</span>
+                                    </div>
+                                    <p class="complaint-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Bairro Industrial
+                                    </p>
+                                    <div class="complaint-footer">
+                                        <span class="complaint-time">
+                                            <i class="fas fa-clock"></i>
+                                            Há 5 horas
+                                        </span>
+                                        <span class="complaint-priority medium">
+                                            <i class="fas fa-info-circle"></i>
+                                            Prioridade Média
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="complaint-actions">
+                                    <button class="btn-action" title="Atribuir Drone">
+                                        <i class="fas fa-drone"></i>
+                                    </button>
+                                    <button class="btn-action" title="Visualizar Detalhes">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="complaint-item">
+                                <div class="complaint-marker"></div>
+                                <div class="complaint-content">
+                                    <div class="complaint-header">
+                                        <h4>Vazamento em via pública</h4>
+                                        <span class="complaint-id">#DR-0239</span>
+                                    </div>
+                                    <p class="complaint-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Centro Comercial
+                                    </p>
+                                    <div class="complaint-footer">
+                                        <span class="complaint-time">
+                                            <i class="fas fa-clock"></i>
+                                            Ontem, 14:30
+                                        </span>
+                                        <span class="complaint-priority low">
+                                            <i class="fas fa-check-circle"></i>
+                                            Em Andamento
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="complaint-actions">
+                                    <button class="btn-action" title="Atribuir Drone">
+                                        <i class="fas fa-drone"></i>
+                                    </button>
+                                    <button class="btn-action" title="Visualizar Detalhes">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mapa de Calor -->
+                <section class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-fire"></i> Mapa de Calor - Áreas Críticas</h2>
+                        <div class="map-controls">
+                            <button class="btn-control active">24h</button>
+                            <button class="btn-control">7 dias</button>
+                            <button class="btn-control">30 dias</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="map-container">
+                            <div class="map-overlay">
+                                <div class="map-legend">
+                                    <h4>Intensidade de Denúncias</h4>
+                                    <div class="legend-scale">
+                                        <span class="legend-item low">Baixa</span>
+                                        <span class="legend-item medium">Média</span>
+                                        <span class="legend-item high">Alta</span>
+                                        <span class="legend-item critical">Crítica</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <h3>Visualização do Mapa de Calor</h3>
+                                <p>Densidade de denúncias por região</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Status dos Drones -->
+                <section class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-satellite-dish"></i> Status da Frota</h2>
+                        <button class="btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Nova Missão
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <div class="drones-status">
+                            <div class="drone-card online">
+                                <div class="drone-header">
+                                    <div class="drone-info">
+                                        <h4>DJI Phantom 04</h4>
+                                        <span class="drone-id">ID: DR-001</span>
+                                    </div>
+                                    <div class="drone-status online">
+                                        <i class="fas fa-circle"></i>
+                                        Online
+                                    </div>
+                                </div>
+                                <div class="drone-stats">
+                                    <div class="stat">
+                                        <label>Bateria</label>
+                                        <div class="battery-level high">
+                                            <div class="battery-fill" style="width: 85%"></div>
+                                            <span>85%</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <label>Sinal</label>
+                                        <div class="signal-strength strong">Excelente</div>
+                                    </div>
+                                    <div class="stat">
+                                        <label>Altitude</label>
+                                        <div class="altitude">120m</div>
+                                    </div>
+                                </div>
+                                <div class="drone-actions">
+                                    <button class="btn-drone-action">
+                                        <i class="fas fa-play"></i>
+                                        Iniciar
+                                    </button>
+                                    <button class="btn-drone-action secondary">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Rota
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="drone-card mission">
+                                <div class="drone-header">
+                                    <div class="drone-info">
+                                        <h4>DJI Mavic 07</h4>
+                                        <span class="drone-id">ID: DR-002</span>
+                                    </div>
+                                    <div class="drone-status mission">
+                                        <i class="fas fa-circle"></i>
+                                        Em Missão
+                                    </div>
+                                </div>
+                                <div class="drone-stats">
+                                    <div class="stat">
+                                        <label>Bateria</label>
+                                        <div class="battery-level medium">
+                                            <div class="battery-fill" style="width: 45%"></div>
+                                            <span>45%</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <label>Sinal</label>
+                                        <div class="signal-strength medium">Bom</div>
+                                    </div>
+                                    <div class="stat">
+                                        <label>Missão</label>
+                                        <div class="mission-progress">
+                                            <div class="progress-fill" style="width: 65%"></div>
+                                            <span>65%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drone-actions">
+                                    <button class="btn-drone-action">
+                                        <i class="fas fa-stop"></i>
+                                        Parar
+                                    </button>
+                                    <button class="btn-drone-action secondary">
+                                        <i class="fas fa-eye"></i>
+                                        Monitorar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Atividade Recente -->
+                <section class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-history"></i> Atividade do Sistema</h2>
+                        <div class="time-filter">
+                            <select class="filter-select">
+                                <option>Últimas 24 horas</option>
+                                <option>Última semana</option>
+                                <option>Último mês</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="activity-feed">
+                            <div class="activity-item">
+                                <div class="activity-icon primary">
+                                    <i class="fas fa-drone"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>DJI Phantom 04</strong> iniciou missão de mapeamento</p>
+                                    <span class="activity-time">Há 15 minutos</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon success">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p>Denúncia <strong>#DR-0238</strong> resolvida com sucesso</p>
+                                    <span class="activity-time">Há 2 horas</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p>Nova denúncia urgente registrada em <strong>Vila Esperança</strong></p>
+                                    <span class="activity-time">Há 3 horas</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon info">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>2.4 GB</strong> de dados de imagem sincronizados</p>
+                                    <span class="activity-time">Há 5 horas</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon secondary">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p>Novo operador <strong>Carlos Silva</strong> adicionado</p>
+                                    <span class="activity-time">Ontem, 16:45</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
